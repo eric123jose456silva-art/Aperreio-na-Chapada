@@ -1,0 +1,48 @@
+[gd_scene load_steps=2 format=3 uid="uid://cw4il54cynp6q"]
+
+[ext_resource type="Script" uid="uid://bpe4i1dwgup5k" path="res://SCRIPTS/tela_inicial.gd" id="1_v3vlf"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v3vlf")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 483.0
+offset_top = 202.0
+offset_right = 683.0
+offset_bottom = 447.0
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="INICIAR" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+text = "INICIAR"
+
+[node name="FASES" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+text = "FASES
+"
+
+[node name="SOBRE" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+text = "SOBRE
+"
+
+[node name="CONFIGURAÇÕES" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+text = "CONFIGURAÇÕES"
+
+[connection signal="pressed" from="VBoxContainer/INICIAR" to="." method="_on_iniciar_pressed"]
+[connection signal="pressed" from="VBoxContainer/FASES" to="." method="_on_fases_pressed"]
+[connection signal="pressed" from="VBoxContainer/SOBRE" to="." method="_on_sobre_pressed"]
+[connection signal="pressed" from="VBoxContainer/CONFIGURAÇÕES" to="." method="_on_configurações_pressed"]
