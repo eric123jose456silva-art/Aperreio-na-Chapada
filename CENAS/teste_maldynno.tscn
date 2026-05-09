@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdgb3pmk8k2f3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_07rrv"]
+radius = 69.18092
+
+[node name="TESTE MALDYNNO" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(426, 193)
+shape = SubResource("CircleShape2D_07rrv")
