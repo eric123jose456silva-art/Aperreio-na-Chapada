@@ -1,17 +1,34 @@
 extends Control
 
-# Este script controla as ações do menu principal
+# Função chamada quando o botão Iniciar é clicado
+func _on_btn_iniciar_pressed():
+	get_tree().change_scene_to_file("res://cenas/Fase1.tscn")
 
-func _on_iniciar_pressed():
-	# Substitua pelo nome do arquivo da sua primeira fase
-	# get_tree().change_scene_to_file("res://fase_1.tscn")
-	print("Botão INICIAR clicado!")
+# Função para abrir configurações
+func _on_btn_config_pressed():
+	# Aqui você pode instanciar uma cena de pop-up ou trocar de cena
+	get_tree().change_scene_to_file("res://cenas/Configuracoes.tscn")
 
-func _on_fases_pressed():
-	print("Abrindo menu de FASES...")
+# Função para abrir sobre
+func _on_btn_sobre_pressed():
+	print("Mostrando créditos dos alunos...")
 
-func _on_sobre_pressed():
-	print("Abrindo tela SOBRE...")
+# Função para sair do jogo
+func _on_btn_sair_pressed():
+	get_tree().quit()
 
-func _on_configuracoes_pressed():
-	print("Abrindo CONFIGURAÇÕES...")
+
+func _on_iniciar_a_aventura_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_fases_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_configurações_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_sobre_o_jogo_pressed() -> void:
+	pass # Replace with function body.

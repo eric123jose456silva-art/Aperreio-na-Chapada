@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://cw4il54cynp6q"]
+[gd_scene load_steps=7 format=3 uid="uid://cw4il54cynp6q"]
 
 [ext_resource type="Script" uid="uid://bpe4i1dwgup5k" path="res://SCRIPTS/tela_inicial.gd" id="1_v3vlf"]
+[ext_resource type="Texture2D" uid="uid://detvv3nl78m57" path="res://ASSETS/IMAGENS/HOME_PAGE_GAME.png" id="2_rlwky"]
+[ext_resource type="Texture2D" uid="uid://bnqlwbrdy1lv2" path="res://ASSETS/IMAGENS/BOTÕES.png" id="3_mru4u"]
+[ext_resource type="Texture2D" uid="uid://cr3cdlymcfluq" path="res://ASSETS/IMAGENS/HOVER.png" id="4_ai43t"]
+[ext_resource type="FontFile" uid="uid://c8ruiimtv7xx3" path="res://ASSETS/FONTES/CordelEncarnado-Italic.ttf" id="5_mru4u"]
+[ext_resource type="Texture2D" uid="uid://cybgmv657uhdd" path="res://ASSETS/IMAGENS/logo.png" id="6_ai43t"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -11,38 +16,148 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_v3vlf")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_rlwky")
+expand_mode = 1
+
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 483.0
-offset_top = 202.0
-offset_right = 683.0
-offset_bottom = 447.0
-theme_override_constants/separation = 15
-alignment = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.07204861
+anchor_top = 0.07098766
+anchor_right = 0.2890625
+anchor_bottom = 0.8302469
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
 
-[node name="INICIAR" type="Button" parent="VBoxContainer"]
-custom_minimum_size = Vector2(200, 50)
+[node name="INICIAR A AVENTURA" type="TextureButton" parent="VBoxContainer"]
+custom_minimum_size = Vector2(250, 120)
 layout_mode = 2
-text = "INICIAR"
+texture_normal = ExtResource("3_mru4u")
+texture_pressed = ExtResource("4_ai43t")
+texture_hover = ExtResource("4_ai43t")
+ignore_texture_size = true
+stretch_mode = 5
 
-[node name="FASES" type="Button" parent="VBoxContainer"]
-custom_minimum_size = Vector2(200, 50)
-layout_mode = 2
-text = "FASES
-"
+[node name="Label" type="Label" parent="VBoxContainer/INICIAR A AVENTURA"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -13.0
+offset_right = 81.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("5_mru4u")
+theme_override_font_sizes/font_size = 18
+text = "INICIAR A AVENTURA"
+horizontal_alignment = 1
 
-[node name="SOBRE" type="Button" parent="VBoxContainer"]
-custom_minimum_size = Vector2(200, 50)
+[node name="FASES" type="TextureButton" parent="VBoxContainer"]
+custom_minimum_size = Vector2(250, 120)
 layout_mode = 2
-text = "SOBRE
-"
+texture_normal = ExtResource("3_mru4u")
+texture_pressed = ExtResource("4_ai43t")
+texture_hover = ExtResource("4_ai43t")
+ignore_texture_size = true
+stretch_mode = 5
 
-[node name="CONFIGURAÇÕES" type="Button" parent="VBoxContainer"]
-custom_minimum_size = Vector2(200, 50)
+[node name="Label" type="Label" parent="VBoxContainer/FASES"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -21.5
+offset_top = -13.0
+offset_right = 22.5
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("5_mru4u")
+theme_override_font_sizes/font_size = 18
+text = "FASES"
+
+[node name="CONFIGURAÇÕES" type="TextureButton" parent="VBoxContainer"]
+custom_minimum_size = Vector2(250, 120)
 layout_mode = 2
+texture_normal = ExtResource("3_mru4u")
+texture_pressed = ExtResource("4_ai43t")
+texture_hover = ExtResource("4_ai43t")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="VBoxContainer/CONFIGURAÇÕES"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.5
+offset_top = -13.0
+offset_right = 61.5
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("5_mru4u")
+theme_override_font_sizes/font_size = 18
 text = "CONFIGURAÇÕES"
 
-[connection signal="pressed" from="VBoxContainer/INICIAR" to="." method="_on_iniciar_pressed"]
-[connection signal="pressed" from="VBoxContainer/FASES" to="." method="_on_fases_pressed"]
-[connection signal="pressed" from="VBoxContainer/SOBRE" to="." method="_on_sobre_pressed"]
-[connection signal="pressed" from="VBoxContainer/CONFIGURAÇÕES" to="." method="_on_configurações_pressed"]
+[node name="SOBRE O JOGO" type="TextureButton" parent="VBoxContainer"]
+custom_minimum_size = Vector2(250, 120)
+layout_mode = 2
+texture_normal = ExtResource("3_mru4u")
+texture_pressed = ExtResource("4_ai43t")
+texture_hover = ExtResource("4_ai43t")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="VBoxContainer/SOBRE O JOGO"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.0
+offset_top = -13.0
+offset_right = 53.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("5_mru4u")
+theme_override_font_sizes/font_size = 18
+text = "SOBRE O JOGO"
+
+[node name="LOG JOGO" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -718.0
+offset_bottom = 347.0
+grow_horizontal = 0
+
+[node name="TextureRect" type="TextureRect" parent="LOG JOGO"]
+layout_mode = 2
+texture = ExtResource("6_ai43t")
