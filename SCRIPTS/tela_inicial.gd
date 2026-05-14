@@ -1,34 +1,34 @@
 extends Control
 
-# Função chamada quando o botão Iniciar é clicado
-func _on_btn_iniciar_pressed():
-	get_tree().change_scene_to_file("res://cenas/Fase1.tscn")
-
-# Função para abrir configurações
-func _on_btn_config_pressed():
-	# Aqui você pode instanciar uma cena de pop-up ou trocar de cena
-	get_tree().change_scene_to_file("res://cenas/Configuracoes.tscn")
-
-# Função para abrir sobre
-func _on_btn_sobre_pressed():
-	print("Mostrando créditos dos alunos...")
-
-# Função para sair do jogo
-func _on_btn_sair_pressed():
-	get_tree().quit()
-
+# Script para a Tela Inicial - Aperreio na Chapada
 
 func _on_iniciar_a_aventura_pressed() -> void:
-	pass # Replace with function body.
-
+	print("Botão INICIAR clicado: Carregando a Chapada do Araripe...")
+	# Verifica se a cena existe antes de tentar mudar para não dar erro
+	if ResourceLoader.exists("res://cenas/Fase1.tscn"):
+		get_tree().change_scene_to_file("res://cenas/Fase1.tscn")
+	else:
+		print("AVISO: A cena res://cenas/Fase1.tscn ainda não foi criada!")
 
 func _on_fases_pressed() -> void:
-	pass # Replace with function body.
-
+	print("Botão FASES clicado: Abrindo mapa de seleção de fases...")
+	# Quando criar a cena, use: get_tree().change_scene_to_file("res://cenas/SelecaoFases.tscn")
 
 func _on_configurações_pressed() -> void:
-	pass # Replace with function body.
-
+	print("Botão CONFIGURAÇÕES clicado: Abrindo menu de som e controles...")
+	if ResourceLoader.exists("res://cenas/Configuracoes.tscn"):
+		get_tree().change_scene_to_file("res://CENAS/configuracoes.tscn")
+	else:
+		print("AVISO: A cena de Configuracoes ainda não existe!")
 
 func _on_sobre_o_jogo_pressed() -> void:
-	pass # Replace with function body.
+	print("--- CRÉDITOS ---")
+	print("Jogo: Aperreio na Chapada")
+	print("Desenvolvido por: Alunos do Cariri")
+	print("Estética: Cordel e Xilogravura")
+	print("-----------------")
+
+# Caso você decida adicionar um botão de sair
+func _on_sair_pressed() -> void:
+	print("Saindo do jogo... Até a próxima, oxente!")
+	get_tree().quit()

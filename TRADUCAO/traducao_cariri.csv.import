@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://dkjgpfuji0cmp"
+
+[deps]
+
+files=["res://TRADUCAO/traducao - PRETENDO QUE ATUALIZE TUDO ALÉM DISSO QUERO UM ID....pt.translation", "res://TRADUCAO/traducao - PRETENDO QUE ATUALIZE TUDO ALÉM DISSO QUERO UM ID....en.translation", "res://TRADUCAO/traducao - PRETENDO QUE ATUALIZE TUDO ALÉM DISSO QUERO UM ID....caririense.translation"]
+
+source_file="res://TRADUCAO/traducao_cariri.csv"
+dest_files=["res://TRADUCAO/traducao - PRETENDO QUE ATUALIZE TUDO ALÉM DISSO QUERO UM ID....pt.translation", "res://TRADUCAO/traducao - PRETENDO QUE ATUALIZE TUDO ALÉM DISSO QUERO UM ID....en.translation", "res://TRADUCAO/traducao - PRETENDO QUE ATUALIZE TUDO ALÉM DISSO QUERO UM ID....caririense.translation"]
+
+[params]
+
+compress=true
+delimiter=0
