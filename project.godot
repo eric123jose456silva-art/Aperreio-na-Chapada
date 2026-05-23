@@ -20,6 +20,10 @@ config/icon="res://icon.svg"
 window/size/mode=2
 window/stretch/mode="canvas_items"
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://TRADUCAO/traducao_cariri.caririense.translation.translation", "res://TRADUCAO/traducao_cariri.en.translation.translation", "res://TRADUCAO/traducao_cariri.pt.translation.translation")
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
