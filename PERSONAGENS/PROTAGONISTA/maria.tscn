@@ -1,9 +1,11 @@
 [gd_scene load_steps=15 format=3 uid="uid://c5csqd0gy3vbl"]
 
-[ext_resource type="Script" uid="uid://dro5bbrt8het2" path="res://SCRIPTS/maria.gd" id="1_1itx1"]
+[ext_resource type="Script" path="res://SCRIPTS/maria.gd" id="1_1itx1"]
 [ext_resource type="Texture2D" uid="uid://cowchsu8yd3lh" path="res://ASSETS/IMAGENS/Gemini_Generated_Image_wjap5pwjap5pwjap-removebg-preview.png" id="2_kksxw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jl0hv"]
+radius = 13.0
+height = 60.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sb3lx"]
 atlas = ExtResource("2_kksxw")
@@ -101,6 +103,8 @@ SPEED = 300.0
 shape = SubResource("CapsuleShape2D_jl0hv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-9.536743e-07, 9.536743e-07)
+scale = Vector2(0.4583333, 0.42058006)
 sprite_frames = SubResource("SpriteFrames_2l122")
 animation = &"walk"
 autoplay = "idle"
