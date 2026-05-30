@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://c5csqd0gy3vbl"]
 
-[ext_resource type="Script" path="res://SCRIPTS/maria.gd" id="1_1itx1"]
+[ext_resource type="Script" uid="uid://dro5bbrt8het2" path="res://SCRIPTS/maria.gd" id="1_1itx1"]
 [ext_resource type="Texture2D" uid="uid://cowchsu8yd3lh" path="res://ASSETS/IMAGENS/Gemini_Generated_Image_wjap5pwjap5pwjap-removebg-preview.png" id="2_kksxw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jl0hv"]
@@ -75,13 +75,13 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 2.0
+"speed": 1.0
 }, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ytclt")
 }, {
-"duration": 1.0,
+"duration": 1.01,
 "texture": SubResource("AtlasTexture_yed6o")
 }, {
 "duration": 1.0,
@@ -92,7 +92,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk",
-"speed": 5.0
+"speed": 6.0
 }]
 
 [node name="Maria" type="CharacterBody2D"]
@@ -108,4 +108,4 @@ scale = Vector2(0.4583333, 0.42058006)
 sprite_frames = SubResource("SpriteFrames_2l122")
 animation = &"walk"
 autoplay = "idle"
-frame_progress = 0.13202702
+frame_progress = 0.8964195
