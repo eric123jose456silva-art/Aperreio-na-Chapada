@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 # --- VARIÁVEIS DE MOVIMENTO ---
-@export var SPEED = 200.0
+@export var SPEED = 100.0
 @export var JUMP_VELOCITY = -400.0
 
 # Obtém a gravidade das configurações do projeto para manter o padrão do motor
