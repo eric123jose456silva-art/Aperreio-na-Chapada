@@ -5,8 +5,8 @@ extends Control
 func _on_iniciar_a_aventura_pressed() -> void:
 	print("Botão INICIAR clicado: Carregando a Chapada do Araripe...")
 	# Verifica se a cena existe antes de tentar mudar para não dar erro
-	if ResourceLoader.exists("res://cenas/Fase1.tscn"):
-		get_tree().change_scene_to_file("res://cenas/Fase1.tscn")
+	if ResourceLoader.exists("res://CENAS/oxente_aonde_eu_to.tscn"):
+		get_tree().change_scene_to_file("res://CENAS/oxente_aonde_eu_to.tscn")
 	else:
 		print("AVISO: A cena res://cenas/Fase1.tscn ainda não foi criada!")
 
