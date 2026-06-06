@@ -112,4 +112,5 @@ frame_progress = 0.8964195
 [node name="Camera2D" type="Camera2D" parent="."]
 scale = Vector2(9.71776, 2.1955078)
 limit_left = 0
+limit_top = 0
 limit_bottom = 542
