@@ -5,7 +5,7 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jl0hv"]
 radius = 13.0
-height = 60.0
+height = 36.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sb3lx"]
 atlas = ExtResource("2_kksxw")
@@ -103,9 +103,13 @@ SPEED = 300.0
 shape = SubResource("CapsuleShape2D_jl0hv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-9.536743e-07, 9.536743e-07)
-scale = Vector2(0.4583333, 0.42058006)
+scale = Vector2(0.2857143, 0.24309392)
 sprite_frames = SubResource("SpriteFrames_2l122")
 animation = &"walk"
 autoplay = "idle"
 frame_progress = 0.8964195
+
+[node name="Camera2D" type="Camera2D" parent="."]
+scale = Vector2(9.71776, 2.1955078)
+limit_left = 0
+limit_bottom = 542
