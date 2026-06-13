@@ -95,7 +95,7 @@ animations = [{
 "speed": 6.0
 }]
 
-[node name="Maria" type="CharacterBody2D"]
+[node name="Maria" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_1itx1")
 SPEED = 300.0
 
