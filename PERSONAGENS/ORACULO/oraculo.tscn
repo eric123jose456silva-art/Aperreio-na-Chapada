@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://bha2nbhowy42i"]
+
+[ext_resource type="Texture2D" uid="uid://wge7sm12y27n" path="res://ASSETS/SPRITES ORACULO/Design sem nome (1).png" id="1_5vt1p"]
+[ext_resource type="Script" uid="uid://dojcboorh0q8j" path="res://SCRIPTS/oraculo.gd" id="1_6yhpl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6yhpl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6pso3"]
+atlas = ExtResource("1_5vt1p")
+region = Rect2(1200, 981, 400, 327)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cayi8"]
+atlas = ExtResource("1_5vt1p")
+region = Rect2(1600, 981, 400, 327)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pleb6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6pso3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cayi8")
+}],
+"loop": true,
+"name": &"VOANDO",
+"speed": 5.0
+}]
+
+[node name="ORACULO" type="CharacterBody2D"]
+script = ExtResource("1_6yhpl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_6yhpl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_pleb6")
+animation = &"VOANDO"
+frame_progress = 0.26447725
