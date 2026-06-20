@@ -95,7 +95,7 @@ animations = [{
 "speed": 6.0
 }]
 
-[node name="Maria" type="CharacterBody2D" groups=["player"]]
+[node name="Maria" type="CharacterBody2D" groups=["Player"]]
 collision_layer = 2
 script = ExtResource("1_1itx1")
 SPEED = 300.0

@@ -1,0 +1,106 @@
+[gd_scene load_steps=14 format=3 uid="uid://b33ss16tiwygr"]
+
+[ext_resource type="Texture2D" uid="uid://cp0400a7ru8of" path="res://ASSETS/SPRITES ONÇA/Apresentação Portfólio Gradiente Granulado (2).png" id="1_lo3cd"]
+[ext_resource type="Script" uid="uid://c5advqly0c8d2" path="res://SCRIPTS/onça.gd" id="1_svt6r"]
+[ext_resource type="Texture2D" uid="uid://c3vbl1x7prdjb" path="res://ASSETS/SPRITES ONÇA/Apresentação Portfólio Gradiente Granulado.png" id="2_svt6r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1owkj"]
+size = Vector2(69, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_og4ii"]
+atlas = ExtResource("2_svt6r")
+region = Rect2(0, 260, 640, 260)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nh8dg"]
+atlas = ExtResource("2_svt6r")
+region = Rect2(640, 260, 640, 260)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rp4j5"]
+atlas = ExtResource("2_svt6r")
+region = Rect2(1280, 260, 640, 260)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qonbl"]
+atlas = ExtResource("1_lo3cd")
+region = Rect2(24, 13, 379, 1067)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4v2cg"]
+atlas = ExtResource("1_lo3cd")
+region = Rect2(424, 0, 382, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k6gl0"]
+atlas = ExtResource("1_lo3cd")
+region = Rect2(806, 0, 382, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_33aow"]
+atlas = ExtResource("1_lo3cd")
+region = Rect2(1188, 0, 382, 1080)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i3epy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_og4ii")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nh8dg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rp4j5")
+}],
+"loop": true,
+"name": &"IDLE",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qonbl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4v2cg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k6gl0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_33aow")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qonbl"]
+size = Vector2(20, 42)
+
+[node name="ONÇA" type="CharacterBody2D"]
+script = ExtResource("1_svt6r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(10.5, 7)
+shape = SubResource("RectangleShape2D_1owkj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(13, -6)
+scale = Vector2(0.17265625, 0.18846151)
+sprite_frames = SubResource("SpriteFrames_i3epy")
+animation = &"attack"
+frame_progress = 0.88648427
+
+[node name="DetectorChao" type="RayCast2D" parent="."]
+position = Vector2(71, -8)
+target_position = Vector2(0, 20)
+
+[node name="DetectorParede" type="RayCast2D" parent="."]
+position = Vector2(25, 5)
+target_position = Vector2(90, 0)
+
+[node name="ZonaDeAtaque" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaDeAtaque"]
+position = Vector2(56, 7)
+shape = SubResource("RectangleShape2D_qonbl")
+
+[connection signal="body_entered" from="ZonaDeAtaque" to="." method="_on_zona_de_ataque_body_entered"]
+[connection signal="body_exited" from="ZonaDeAtaque" to="." method="_on_zona_de_ataque_body_exited"]
